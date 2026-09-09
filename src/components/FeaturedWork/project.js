@@ -32,7 +32,7 @@ export const projects = [
   {
     name: "Aula prática",
     description: "O método aplicado à realidade da barbearia brasileira.",
-    img: "/brisola-post/workshop.jpg",
+    img: "/brisola-post/timeless-2.jpg",
     route: "/sample-project",
   },
 ];
