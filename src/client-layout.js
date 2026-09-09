@@ -20,45 +20,36 @@ export default function ClientLayout({ children }) {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const scrollSettings = isMobile
-    ? {
-        duration: 0.8,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: "vertical",
-        gestureDirection: "vertical",
-        smooth: true,
-        smoothTouch: true,
-        touchMultiplier: 1.5,
-        infinite: false,
-        lerp: 0.09,
-        wheelMultiplier: 1,
-        orientation: "vertical",
-        smoothWheel: true,
-        syncTouch: true,
-      }
-    : {
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: "vertical",
-        gestureDirection: "vertical",
-        smooth: true,
-        smoothTouch: false,
-        touchMultiplier: 2,
-        infinite: false,
-        lerp: 0.1,
-        wheelMultiplier: 1,
-        orientation: "vertical",
-        smoothWheel: true,
-        syncTouch: true,
-      };
+  const scrollSettings = {
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: "vertical",
+    gestureDirection: "vertical",
+    smooth: true,
+    smoothTouch: false,
+    touchMultiplier: 2,
+    infinite: false,
+    lerp: 0.1,
+    wheelMultiplier: 1,
+    orientation: "vertical",
+    smoothWheel: true,
+    syncTouch: true,
+  };
 
-  return (
-    <ReactLenis root options={scrollSettings}>
+  const content = (
+    <>
       <Menu pageRef={pageRef} />
 
       <div className="page" ref={pageRef}>
         {children}
       </div>
+    </>
+  );
+
+  // Mobile keeps the browser's native scrolling; Lenis remains desktop-only.
+  return isMobile ? content : (
+    <ReactLenis root options={scrollSettings}>
+      {content}
     </ReactLenis>
   );
 }
