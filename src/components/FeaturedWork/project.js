@@ -8,19 +8,19 @@ export const projects = [
   {
     name: "Executive contour",
     description: "Estrutura e conexão para um acabamento comercial.",
-    img: "/brisola-post/timeless-1.jpg",
+    img: "/brisola-post/pompadour-3.jpg",
     route: "/sample-project",
   },
   {
     name: "Corte longo",
     description: "Projeção, camadas e movimento para fios longos.",
-    img: "/brisola-post/mullet.jpg",
+    img: "/brisola-post/pompadour-2.jpg",
     route: "/sample-project",
   },
   {
     name: "Mullet",
     description: "Proporção e personalidade sem perder a técnica.",
-    img: "/brisola-post/old-is-cool.jpg",
+    img: "/brisola-post/mullet.jpg",
     route: "/sample-project",
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
   {
     name: "Aula prática",
     description: "O método aplicado à realidade da barbearia brasileira.",
-    img: "/brisola-post/timeless-2.jpg",
+    img: "/brisola-post/workshop.jpg",
     route: "/sample-project",
   },
 ];
