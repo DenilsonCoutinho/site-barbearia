@@ -108,5 +108,18 @@ footer .footer-byline p {
 
   footer .footer-byline {
     padding: 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    align-items: end;
   }
+
+  footer .footer-byline > div { min-width: 0; }
+  footer .footer-byline p { font-size: 0.75rem; line-height: 1.2; }
+  footer .footer-author { text-align: right; }
+}
+
+@media (max-width: 500px) {
+  footer .footer-byline { grid-template-columns: 1fr; gap: 0.35rem; }
+  footer .footer-author { justify-content: flex-start; text-align: left; }
 }

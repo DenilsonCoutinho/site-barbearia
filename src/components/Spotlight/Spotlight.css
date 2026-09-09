@@ -75,12 +75,12 @@
 
 @media (max-width: 1000px) {
   .spotlight .marquees {
-    height: 100svh;
+    height: 72svh;
   }
 
   .spotlight .marquee-container {
     width: 250%;
-    height: 150px;
+    height: 130px;
   }
 
   .spotlight #marquee-2 .marquee,
