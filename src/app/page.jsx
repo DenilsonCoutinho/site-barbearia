@@ -54,9 +54,9 @@ const Page = () => {
             <div className="hero-footer">
               <Copy animateOnScroll={false} delay={0.3}>
                 <p className="lg">
-                  Para barbeiros iniciantes ou experientes que querem dominar a
-                  tesoura e entregar cortes melhores na rotina real da
-                  barbearia.
+                  Aulas para barbeiros iniciantes ou experientes que querem
+                  dominar a tesoura e entregar cortes melhores na rotina real
+                  da barbearia.
                 </p>
               </Copy>
 
