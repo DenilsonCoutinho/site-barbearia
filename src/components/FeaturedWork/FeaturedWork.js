@@ -5,13 +5,11 @@ import { projects } from "./project.js";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { useViewTransition } from "@/hooks/useViewTransition";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function FeaturedWork() {
   const featuredWorkContainerRef = useRef(null);
-  const { navigateWithTransition } = useViewTransition();
 
   useGSAP(
     () => {
@@ -19,14 +17,14 @@ export default function FeaturedWork() {
         const featuredWorkItem = document.createElement("div");
         featuredWorkItem.className = "featured-work-item";
         featuredWorkItem.innerHTML = `
-        <a href="${project.route}" class="featured-work-item-link">
+        <div class="featured-work-item-link">
           <div class="featured-work-item-img">
            <div class="featured-work-item-copy">
             <h3>${project.name}</h3>
           </div>
             <img src="${project.img}" alt="${project.name}" />
           </div>
-        </a>
+        </div>
       `;
         return featuredWorkItem;
       };
@@ -81,20 +79,6 @@ export default function FeaturedWork() {
         });
       });
 
-      const links = workContainer.querySelectorAll(".featured-work-item-link");
-      const handleClick = (e) => {
-        const anchor = e.currentTarget;
-        if (!anchor) return;
-        e.preventDefault();
-        const href = anchor.getAttribute("href");
-        if (!href) return;
-        navigateWithTransition(href);
-      };
-      links.forEach((a) => a.addEventListener("click", handleClick));
-
-      return () => {
-        links.forEach((a) => a.removeEventListener("click", handleClick));
-      };
     },
     { scope: featuredWorkContainerRef }
   );
