@@ -95,13 +95,15 @@
     flex-direction: column;
     gap: 0;
     width: 90%;
-    height: 48svh;
+    height: auto;
     min-height: 18rem;
     padding: 1.25rem;
   }
 
   .client-reviews .review-card-content-wrapper {
     width: 100%;
+    height: auto;
+    min-height: 18rem;
     justify-content: center;
     gap: 2rem;
   }
