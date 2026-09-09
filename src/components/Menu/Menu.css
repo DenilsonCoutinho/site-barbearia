@@ -1,0 +1,42 @@
+.site-nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10001;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem 2rem;
+  pointer-events: none;
+}
+.nav-logo, .nav-toggle { pointer-events: auto; }
+.nav-logo { display: block; width: 5.5rem; }
+.nav-logo img { display: block; width: 100%; height: auto; }
+.nav-toggle {
+  border: 0; border-radius: .75rem; padding: .9rem 1.25rem;
+  background: var(--base-200); color: var(--base-400);
+  font-family: "PP Pangram Sans"; font-size: .9rem; font-weight: 900;
+  text-transform: uppercase; cursor: pointer; transition: transform .2s ease;
+}
+.nav-toggle:hover { transform: translateY(-2px); }
+.menu-overlay {
+  position: fixed; inset: 0; z-index: 10000; overflow-y: auto;
+  padding: 7rem 2rem 3rem; background: var(--base-400); color: var(--base-100);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.menu-panel {
+  width: min(100%, 1100px); min-height: 100%; margin: 0 auto;
+  display: grid; grid-template-columns: .8fr 1.2fr .8fr; gap: 4rem; align-items: start;
+}
+.menu-intro, .menu-social { display: flex; flex-direction: column; gap: .5rem; font-family: "PP Neue Montreal"; line-height: 1.2; }
+.menu-eyebrow { margin: 0 0 .75rem; color: var(--base-300); font-family: "Geist Mono"; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+.menu-links { display: flex; flex-direction: column; gap: .4rem; overflow: hidden; }
+.menu-links a { color: var(--base-100); font-family: "Big Shoulders Display", sans-serif; font-size: clamp(3rem, 6vw, 6.5rem); font-weight: 900; line-height: .85; text-decoration: none; text-transform: uppercase; transform: translateY(110%); opacity: 0; transition: color .2s ease, transform .2s ease; }
+.menu-links a:hover, .menu-social a:hover { color: var(--base-200); }
+.menu-social a { color: var(--base-100); text-decoration: none; transition: color .2s ease; }
+@media (max-width: 1000px) {
+  .site-nav { padding: 1rem 1.25rem; }
+  .nav-logo { width: 4.5rem; }
+  .menu-overlay { padding: 6rem 1.25rem 2rem; }
+  .menu-panel { grid-template-columns: 1fr; gap: 2rem; }
+  .menu-links a { font-size: clamp(2.8rem, 13vw, 5rem); }
+}

@@ -1,0 +1,9 @@
+.line {
+  position: relative;
+  transform: translateY(100%);
+  will-change: transform;
+  padding-top: 0.16em;
+  padding-bottom: 0.2em;
+  margin-top: -0.16em;
+  margin-bottom: -0.2em;
+}

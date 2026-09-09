@@ -1,0 +1,220 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  background-color: var(--base-100);
+  overflow: hidden;
+}
+
+.hero h1 {
+  line-height: 1;
+  font-size: clamp(3rem, 7vw, 5.2rem);
+}
+
+.hero .container .hero-content-main {
+  justify-content: flex-start;
+  padding-top: 2.5rem;
+}
+
+.hero .container .hero-content-main .hero-footer {
+  margin-top: 0;
+  transform: translateY(-2rem);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -1.5rem;
+  background:
+    linear-gradient(115deg, rgba(3, 8, 5, 0.5), rgba(3, 8, 5, 0.38)),
+    radial-gradient(circle at 52% 46%, rgba(3, 8, 5, 0.34) 0%, rgba(30, 75, 44, 0.4) 48%, rgba(8, 43, 24, 0.92) 100%),
+    url("/brisola-hero-bg.png") center 90% / cover no-repeat;
+  filter: none;
+  transform: scale(1.04);
+  opacity: 0.96;
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Brisola's deep green is the main canvas for the course landing page. */
+.hero,
+.showreel,
+.featured-work,
+.client-reviews-header-container,
+.client-reviews,
+.spotlight,
+.cta {
+  background-color: var(--base-400) !important;
+  color: var(--base-100);
+}
+
+/* Light beige panels keep the page airy between the deep-green sections. */
+.showreel,
+.featured-work,
+.spotlight,
+.cta {
+  background-color: var(--base-100) !important;
+  color: var(--base-400);
+}
+
+.spotlight,
+.spotlight .marquee-img-item h1 {
+  color: var(--base-400) !important;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero .container .hero-content-main {
+  width: 65%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .container .hero-content-main .hero-footer {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero .container .hero-content-main .hero-footer p.mn {
+  color: var(--base-300);
+}
+
+.hero .container .hero-footer-outer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+}
+
+.hero .container .hero-footer-outer div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.featured-work {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 8rem 0 1rem 0;
+  background-color: var(--base-100);
+  overflow: hidden;
+}
+
+.featured-work .featured-work-header-content {
+  margin: 0 auto;
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  text-align: center;
+}
+
+.featured-work .featured-work-header {
+  width: 50%;
+}
+
+.featured-work .featured-work-header-content .arrow {
+  width: 3rem;
+}
+
+.featured-work .featured-work-header-content .featured-work-header-copy {
+  width: 50%;
+}
+
+.client-reviews-header-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--base-100);
+  overflow: hidden;
+}
+
+.client-reviews-header-container .client-reviews-header-content {
+  margin: 0 auto;
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  text-align: center;
+}
+
+.client-reviews-header-container .client-reviews-header {
+  width: 50%;
+}
+
+.client-reviews-header-container .client-reviews-header-content .arrow {
+  width: 3rem;
+}
+
+.client-reviews-header-container
+  .client-reviews-header-content
+  .client-reviews-header-copy {
+  width: 50%;
+}
+
+@media (max-width: 1000px) {
+  .hero .container .hero-content-main {
+    padding-top: 2.5rem;
+  }
+
+  .hero .container .hero-content-main .hero-footer {
+    margin-top: 0;
+    transform: none;
+  }
+
+  .hero .container .hero-content-main,
+  .hero .container .hero-content-main .hero-footer {
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .hero .container .hero-content-main .hero-footer p.lg {
+    max-width: 32rem;
+    font-size: 1.05rem;
+    line-height: 1.18;
+  }
+
+  .featured-work .featured-work-header,
+  .featured-work .featured-work-header-content,
+  .featured-work .featured-work-header-content .featured-work-header-copy,
+  .client-reviews-header-container .client-reviews-header,
+  .client-reviews-header-container .client-reviews-header-content,
+  .client-reviews-header-container
+    .client-reviews-header-content
+    .client-reviews-header-copy {
+    width: 100%;
+  }
+
+  .featured-work-list {
+    padding: 8rem 0 !important;
+  }
+
+  .featured-work-list .row {
+    width: 100% !important;
+    flex-direction: column;
+  }
+}
