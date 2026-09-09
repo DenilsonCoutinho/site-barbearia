@@ -28,7 +28,7 @@
   background:
     linear-gradient(115deg, rgba(3, 8, 5, 0.5), rgba(3, 8, 5, 0.38)),
     radial-gradient(circle at 52% 46%, rgba(3, 8, 5, 0.34) 0%, rgba(30, 75, 44, 0.4) 48%, rgba(8, 43, 24, 0.92) 100%),
-    url("/brisola-hero-bg.png") center 90% / cover no-repeat;
+    url("/brisola-hero-bg.webp") center 90% / cover no-repeat;
   filter: none;
   transform: scale(1.04);
   opacity: 0.96;
