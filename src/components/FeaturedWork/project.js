@@ -32,7 +32,8 @@ export const projects = [
   {
     name: "Aula prática",
     description: "O método aplicado à realidade da barbearia brasileira.",
-    img: "/brisola-post/timeless-2.jpg",
+    img: "/brisola-hero-bg.webp",
     route: "/sample-project",
   },
 ];
+

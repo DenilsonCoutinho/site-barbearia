@@ -3,13 +3,10 @@ import "./work.css";
 import { useRef, useMemo } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useViewTransition } from "@/hooks/useViewTransition";
 
 gsap.registerPlugin(useGSAP);
 
 const Page = () => {
-  const { navigateWithTransition } = useViewTransition();
-
   const workPageContainer = useRef(null);
 
   const workItems = useMemo(
@@ -203,14 +200,7 @@ const Page = () => {
         {[0, 1, 2].map((rowIndex) => (
           <div className="row" key={`row-${rowIndex}`}>
             {workItems.slice(rowIndex * 2, rowIndex * 2 + 2).map((item) => (
-              <a
-                key={item.index}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigateWithTransition(item.href);
-                }}
-              >
+              <div key={item.index} className="folder-link">
                 <div className={`folder ${item.variant}`}>
                   <div className="folder-preview">
                     {item.images.map((src, i) => (
@@ -231,7 +221,7 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         ))}

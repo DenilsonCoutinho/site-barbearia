@@ -4,6 +4,12 @@ import Copy from "../Copy/Copy";
 const BarberExperience = () => {
   return (
     <section className="barber-experience" id="curso">
+      <img
+        className="barber-experience-divider"
+        src="/ornaments/experience-divider.png"
+        alt=""
+        aria-hidden="true"
+      />
       <div className="barber-experience-copy">
         <Copy animateOnScroll={true}>
           <p className="sm">Como eu ensino</p>
@@ -30,6 +36,12 @@ const BarberExperience = () => {
         </div>
         <div className="barber-experience-accent" aria-hidden="true" />
       </div>
+      <img
+        className="barber-experience-divider barber-experience-divider-bottom"
+        src="/ornaments/experience-divider.png"
+        alt=""
+        aria-hidden="true"
+      />
     </section>
   );
 };

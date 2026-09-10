@@ -5,7 +5,7 @@
   align-items: center;
   gap: 6rem;
   min-height: 76svh;
-  padding: 9rem 10vw;
+  padding: 3rem 10vw;
   overflow: hidden;
   background: var(--base-400);
   color: var(--base-100);
@@ -76,6 +76,23 @@
   z-index: 3;
 }
 
+.barber-experience-divider {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  height: 5rem;
+  object-fit: cover;
+  object-position: center 46%;
+  mix-blend-mode: screen;
+  margin-bottom: -2rem;
+  pointer-events: none;
+}
+
+.barber-experience-divider-bottom {
+  margin-top: -2rem;
+  margin-bottom: 0;
+}
+
 .barber-experience-accent {
   position: absolute;
   top: 19%;
@@ -103,5 +120,17 @@
     width: 100%;
     height: 72vw;
     min-height: 21rem;
+  }
+
+  .barber-experience-divider {
+    width: 120%;
+    height: 4rem;
+    margin-left: -10%;
+    margin-bottom: -1.5rem;
+  }
+
+  .barber-experience-divider-bottom {
+    margin-top: -1.5rem;
+    margin-bottom: 0;
   }
 }
