@@ -1,39 +1,27 @@
 export const projects = [
   {
-    name: "Tesoura curta",
-    description: "Corte social com leitura, precisão e agilidade.",
+    name: "Executive Contour",
+    tag: "Tesoura curta",
+    img: "/brisola-post/executive-contour.webp",
+  },
+  {
+    name: "Long Trim com Taper Fade",
+    tag: "Tesoura média",
     img: "/brisola-post/pompadour-1.jpg",
-    route: "/sample-project",
   },
   {
-    name: "Executive contour",
-    description: "Estrutura e conexão para um acabamento comercial.",
+    name: "Long Trim com Projeção",
+    tag: "Old Money",
     img: "/brisola-post/pompadour-3.jpg",
-    route: "/sample-project",
-  },
-  {
-    name: "Corte longo",
-    description: "Projeção, camadas e movimento para fios longos.",
-    img: "/brisola-post/pompadour-2.jpg",
-    route: "/sample-project",
   },
   {
     name: "Mullet",
-    description: "Proporção e personalidade sem perder a técnica.",
-    img: "/brisola-post/mullet.jpg",
-    route: "/sample-project",
+    tag: "",
+    img: "/brisola-post/mullet.webp",
   },
   {
-    name: "Old money",
-    description: "Tesoura longa com finalização limpa e atual.",
-    img: "/brisola-post/atendimento.jpg",
-    route: "/sample-project",
-  },
-  {
-    name: "Aula prática",
-    description: "O método aplicado à realidade da barbearia brasileira.",
-    img: "/brisola-hero-bg.webp",
-    route: "/sample-project",
+    name: "Corte Longo",
+    tag: "",
+    img: "/brisola-post/pompadour-2.jpg",
   },
 ];
-

@@ -17,13 +17,14 @@ export default function FeaturedWork() {
         const featuredWorkItem = document.createElement("div");
         featuredWorkItem.className = "featured-work-item";
         featuredWorkItem.innerHTML = `
-        <div class="featured-work-item-link">
+        <div class="featured-work-frame">
           <div class="featured-work-item-img">
-           <div class="featured-work-item-copy">
-            <h3>${project.name}</h3>
-          </div>
             <img src="${project.img}" alt="${project.name}" />
           </div>
+        </div>
+        <div class="featured-work-item-copy">
+          <h3>${project.name}</h3>
+          ${project.tag ? `<p class="sm">${project.tag}</p>` : ""}
         </div>
       `;
         return featuredWorkItem;
@@ -37,13 +38,10 @@ export default function FeaturedWork() {
         const row = document.createElement("div");
         row.className = "row";
 
-        const leftItemIndex = i % projects.length;
-        const rightItemIndex = (i + 1) % projects.length;
+        row.appendChild(createFeaturedWorkItem(projects[i]));
 
-        row.appendChild(createFeaturedWorkItem(projects[leftItemIndex]));
-
-        if (i + 1 < projects.length * 2) {
-          row.appendChild(createFeaturedWorkItem(projects[rightItemIndex]));
+        if (i + 1 < projects.length) {
+          row.appendChild(createFeaturedWorkItem(projects[i + 1]));
         }
 
         workContainer.appendChild(row);

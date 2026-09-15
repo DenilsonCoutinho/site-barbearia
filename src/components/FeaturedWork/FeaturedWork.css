@@ -5,7 +5,7 @@
   padding: 8rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 .featured-work-list .row {
@@ -13,21 +13,49 @@
   flex: 1;
   width: 80%;
   display: flex;
-  gap: 1.5rem;
+  gap: 3rem;
+}
+
+/* Corte sozinho na última linha ocupa meia largura, como os das linhas cheias. */
+.featured-work-list .row .featured-work-item:only-child {
+  flex: 0 0 calc(50% - 1.5rem);
+  margin: 0 auto;
 }
 
 .featured-work-list .featured-work-item {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
+}
+
+/* Moldura de quadro: filete dourado externo, passe-partout e sombra projetada. */
+.featured-work-list .featured-work-frame {
+  position: relative;
+  padding: 1rem;
+  border: 0.5rem solid var(--base-300);
+  background: var(--base-200);
+  box-shadow: 0 1.2rem 2.5rem rgba(21, 32, 25, 0.2);
+}
+
+.featured-work-list .featured-work-frame::before {
+  content: "❧";
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  color: var(--base-300);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3rem;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .featured-work-list .featured-work-item-img {
   position: relative;
   aspect-ratio: 4/3;
-  border-radius: 1rem;
   overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(21, 32, 25, 0.35);
 }
 
 .featured-work-list .featured-work-item-img img {
@@ -36,32 +64,45 @@
   object-fit: cover;
 }
 
+/* Placa do quadro, abaixo da moldura. */
 .featured-work-list .featured-work-item-copy {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background-color: var(--base-400);
-  padding: 0.5rem 0.5rem 0.35rem 0.5rem;
-  border-radius: 0.5rem;
+  text-align: center;
 }
 
 .featured-work-list .featured-work-item-copy h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: -0.01rem;
-  color: var(--base-100);
+  color: var(--base-400);
 }
 
-.featured-work-list .featured-work-item-link {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  text-decoration: none;
-  color: inherit;
-  width: 100%;
-  height: 100%;
+.featured-work-list .featured-work-item-copy .sm {
+  margin-top: 0.4rem;
 }
 
-.featured-work-list .featured-work-item-link:hover {
-  text-decoration: none;
-  color: inherit;
+@media (max-width: 1000px) {
+  .featured-work-list {
+    gap: 4rem;
+  }
+
+  .featured-work-list .row {
+    gap: 4rem;
+  }
+
+  .featured-work-list .row .featured-work-item:only-child {
+    flex: 1;
+  }
+
+  .featured-work-list .featured-work-frame {
+    padding: 0.7rem;
+    border-width: 0.35rem;
+  }
+
+  .featured-work-list .featured-work-frame::before {
+    top: -0.35rem;
+    font-size: 2.3rem;
+  }
+
+  .featured-work-list .featured-work-item-copy h3 {
+    font-size: 1.5rem;
+  }
 }

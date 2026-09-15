@@ -57,7 +57,7 @@ const CTACard = () => {
 
               <div className="price-box">
                 <span className="price-label">Investimento</span>
-                <strong>R$ 97,00</strong>
+                <strong>R$ 127,00</strong>
                 <span className="price-note">Acesso ao curso + certificado</span>
                 <Button animateOnScroll={true} delay={0.25} variant="light" href="#inscricao">
                   Quero garantir minha vaga

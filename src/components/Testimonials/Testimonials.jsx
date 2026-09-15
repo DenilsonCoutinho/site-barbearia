@@ -7,11 +7,8 @@ const testimonials = [
     quote:
       "Dominar a tesoura era o que faltava pra minha bancada subir de nível. O curso vai direto na dor de quem tá no dia a dia da barbearia, sem enrolação. Recomendo demais!",
     name: "Edie Aikau dos Santos",
-    image: true,
+    image: "/testimonials/edie-aikau.jpg",
   },
-  { quote: "Espaço reservado para o próximo depoimento.", name: "Próximo aluno" },
-  { quote: "Espaço reservado para o próximo depoimento.", name: "Próximo aluno" },
-  { quote: "Espaço reservado para o próximo depoimento.", name: "Próximo aluno" },
 ];
 
 const Testimonials = () => {
@@ -50,10 +47,7 @@ const Testimonials = () => {
               <article className="testimonial-card" key={`${testimonial.name}-${index}`}>
                 {testimonial.image ? (
                   <div className="testimonial-card-image">
-                    <img
-                      src="/testimonials/edie-aikau.jpg"
-                      alt="Edie Aikau dos Santos"
-                    />
+                    <img src={testimonial.image} alt={testimonial.name} />
                   </div>
                 ) : (
                   <div className="testimonial-card-image testimonial-card-placeholder" aria-hidden="true" />
@@ -66,21 +60,23 @@ const Testimonials = () => {
             ))}
           </div>
         </div>
-        <div className="testimonials-controls">
-          <button type="button" onClick={previous} aria-label="Depoimento anterior">←</button>
-          <div className="testimonials-dots" aria-label="Selecionar depoimento">
-            {testimonials.map((_, index) => (
-              <button
-                type="button"
-                key={index}
-                className={index === activeIndex ? "is-active" : ""}
-                onClick={() => emblaApi?.scrollTo(index)}
-                aria-label={`Ir para depoimento ${index + 1}`}
-              />
-            ))}
+        {testimonials.length > 1 && (
+          <div className="testimonials-controls">
+            <button type="button" onClick={previous} aria-label="Depoimento anterior">←</button>
+            <div className="testimonials-dots" aria-label="Selecionar depoimento">
+              {testimonials.map((_, index) => (
+                <button
+                  type="button"
+                  key={index}
+                  className={index === activeIndex ? "is-active" : ""}
+                  onClick={() => emblaApi?.scrollTo(index)}
+                  aria-label={`Ir para depoimento ${index + 1}`}
+                />
+              ))}
+            </div>
+            <button type="button" onClick={next} aria-label="Próximo depoimento">→</button>
           </div>
-          <button type="button" onClick={next} aria-label="Próximo depoimento">→</button>
-        </div>
+        )}
       </div>
     </section>
   );
