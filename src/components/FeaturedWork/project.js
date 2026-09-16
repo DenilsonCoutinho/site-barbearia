@@ -2,26 +2,26 @@ export const projects = [
   {
     name: "Executive Contour",
     tag: "Tesoura curta",
-    img: "/brisola-post/executive-contour.webp",
+    img: "/brisola-post/executive-contour-framed.png",
   },
   {
     name: "Long Trim com Taper Fade",
     tag: "Tesoura média",
-    img: "/brisola-post/pompadour-1.jpg",
+    img: "/brisola-post/long-trim-taper-framed.png",
   },
   {
     name: "Long Trim com Projeção",
     tag: "Old Money",
-    img: "/brisola-post/pompadour-3.jpg",
+    img: "/brisola-post/long-trim-projection-framed.png",
   },
   {
     name: "Mullet",
     tag: "",
-    img: "/brisola-post/mullet.webp",
+    img: "/brisola-post/mullet-framed.png",
   },
   {
     name: "Corte Longo",
     tag: "",
-    img: "/brisola-post/pompadour-2.jpg",
+    img: "/brisola-post/long-cut-framed.png",
   },
 ];

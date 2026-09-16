@@ -9,6 +9,18 @@ const testimonials = [
     name: "Edie Aikau dos Santos",
     image: "/testimonials/edie-aikau.jpg",
   },
+  {
+    quote:
+      "Hoje minha gratidão vai ao Erick por compartilhar tanto conhecimento neste curso incrível de corte masculino na tesoura e texturização. Cada técnica e cada ensinamento contribuíram muito para minha evolução profissional. Hoje sinto mais confiança em fazer meus cortes masculinos na tesoura. Obrigado, Erick, por esta experiência e por fazer parte da minha evolução. 🙏🏼🥂",
+    name: "Uziel de Ramos",
+    image: "/testimonials/aluno-curso-tesoura.png",
+  },
+  {
+    quote:
+      "Quando iniciei nessa área, ficava muito tenso quando clientes me pediam cortes na tesoura, achava que era um bixo de 7 cabeças, mal sabia por onde começar, foi quando conheci o Erick e a Barbearia Brisola, fiz o curso e a experiencia foi incrivel, além de aprender varias técnicas que praticadas deixam o corte simples. Hoje sou amigo, e um grande fã do Erick, um incrivel ser humano, e um excelente barbeiro! Sempre que possível quero estar presente em suas aulas, para quem sabe um dia estar no mesmo nível dele!",
+    name: "Diogo Martins",
+    image: "/testimonials/aluno-brisola.png",
+  },
 ];
 
 const Testimonials = () => {

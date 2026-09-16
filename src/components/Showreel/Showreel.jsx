@@ -58,9 +58,9 @@ const Showreel = () => {
 
       <div className={`volume-icon ${!isMuted ? "is-playing" : ""}`} onClick={toggleMute}>
         {isMuted ? (
-          <LuVolumeX color="#171412" size={25} />
+          <LuVolumeX color="#171412" size={20} />
         ) : (
-          <LuVolume color="#171412" size={25} />
+          <LuVolume color="#171412" size={20} />
         )}
       </div>
 
