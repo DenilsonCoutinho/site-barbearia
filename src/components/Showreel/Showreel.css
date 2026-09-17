@@ -24,6 +24,16 @@
   object-fit: cover;
 }
 
+@media (min-width: 769px) {
+  .showreel .showreel-container.frame-1 img {
+    object-position: 62% 36%;
+  }
+
+  .showreel .showreel-container.frame-4 img {
+    object-position: 54% 42%;
+  }
+}
+
 .showreel .volume-icon {
   position: absolute;
   top: 50%;

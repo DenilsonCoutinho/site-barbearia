@@ -12,7 +12,7 @@ const Showreel = () => {
   const audioRef = useRef(null);
   const [currentFrame, setCurrentFrame] = useState(1);
   const [isMuted, setIsMuted] = useState(true);
-  const totalFrames = 6;
+  const totalFrames = 4;
   const frameInterval = 900;
 
   const toggleMute = () => {
@@ -49,10 +49,10 @@ const Showreel = () => {
 
   return (
     <section className="showreel" ref={showreelSecRef}>
-      <div className="showreel-container">
+      <div className={`showreel-container frame-${currentFrame}`}>
         <img
-          src={`/showreel/showreel-frame-${currentFrame}.jpg`}
-          alt="Showreel frame"
+          src={`/showreel/showreel-frame-${currentFrame}.webp`}
+          alt="Aula prática na Barbearia Brisola"
         />
       </div>
 

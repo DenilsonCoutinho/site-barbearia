@@ -102,11 +102,11 @@
 }
 
 .testimonial-card-image img[src$="aluno-curso-tesoura.png"] {
-  object-position: center 22%;
+  object-position: center top;
 }
 
 .testimonial-card-image img[src$="aluno-brisola.png"] {
-  object-position: center 20%;
+  object-position: center top;
 }
 
 .testimonial-card-copy {
