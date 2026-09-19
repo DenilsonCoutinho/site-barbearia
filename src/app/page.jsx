@@ -1,6 +1,7 @@
 "use client";
 import "./home.css";
 import Button from "@/components/Button/Button";
+import CourseVideo from "@/components/CourseVideo/CourseVideo";
 import Showreel from "@/components/Showreel/Showreel";
 import BarberExperience from "@/components/BarberExperience/BarberExperience";
 import FeaturedWork from "@/components/FeaturedWork/FeaturedWork";
@@ -69,9 +70,11 @@ const Page = () => {
         </div>
       </section>
 
-      <Showreel />
+      <CourseVideo />
 
       <BarberExperience />
+
+      <Showreel />
 
       <section className="featured-work" id="conteudos">
         <div className="container">

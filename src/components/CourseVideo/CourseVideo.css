@@ -1,0 +1,105 @@
+.course-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 6rem 1.5rem;
+  background: var(--base-400);
+  color: var(--base-100);
+}
+
+.course-video-copy {
+  max-width: 42rem;
+  text-align: center;
+}
+
+.course-video-copy h2 {
+  max-width: 42rem;
+  font-size: clamp(3.2rem, 5.5vw, 6.5rem);
+  line-height: 0.9;
+}
+
+.course-video-player {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 32rem);
+  aspect-ratio: 9 / 16.6;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0.5rem;
+  border: 1px solid rgba(238, 229, 213, 0.78);
+  border-radius: 3.1rem;
+  background: linear-gradient(145deg, #fffdf8, #d9ccb7);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.course-video-player iframe {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  width: calc(100% - 1rem);
+  aspect-ratio: 9 / 16;
+  height: auto;
+  transform: translateY(-50%);
+  border: 0;
+  border-radius: 2.55rem;
+  background: var(--base-500);
+}
+
+.course-video-player::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0.68rem;
+  left: 50%;
+  width: 34%;
+  height: 1.35rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: #101d15;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.course-video-player::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 1.17rem;
+  left: 50%;
+  width: 0.34rem;
+  height: 0.34rem;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #293d52;
+  box-shadow: 0 0 0 0.08rem rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .course-video {
+    gap: 3rem;
+    padding: 5rem 1.25rem;
+  }
+
+  .course-video-player {
+    width: min(100%, 22rem);
+    padding: 0.4rem;
+    border-radius: 2.55rem;
+  }
+
+  .course-video-player iframe {
+    left: 0.4rem;
+    width: calc(100% - 0.8rem);
+    border-radius: 2.1rem;
+  }
+
+  .course-video-player::before {
+    top: 0.55rem;
+    height: 1.15rem;
+  }
+
+  .course-video-player::after {
+    top: 0.96rem;
+  }
+}
