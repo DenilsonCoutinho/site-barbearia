@@ -76,4 +76,8 @@
   .featured-work-list .featured-work-item-copy h3 {
     font-size: 1.5rem;
   }
+
+  .featured-work-list .featured-work-item-img {
+    aspect-ratio: 9 / 16;
+  }
 }
