@@ -29,9 +29,9 @@ const Preloader = () => {
     <div
       className="preloader"
       role="status"
-      aria-label="Carregando Brisola Educação"
+      aria-label="Carregando Domínio dos Cortes na Tesoura"
     >
-      <img src="/logo-brisola.png" alt="Brisola Educação" />
+      <img src="/logo-dominio-tesoura.png" alt="Domínio dos Cortes na Tesoura" />
     </div>
   );
 };

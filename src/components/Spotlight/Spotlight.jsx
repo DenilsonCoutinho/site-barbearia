@@ -138,7 +138,7 @@ const Spotlight = () => {
               <img src="/spotlight/spotlight-9.jpg" alt="" />
             </div>
             <div className="marquee-img-item marquee-text-item">
-                <h1>Estilo</h1>
+                <h1>Excelência</h1>
             </div>
             <div className="marquee-img-item">
               <img src="/spotlight/spotlight-10.webp" alt="" />
@@ -164,7 +164,7 @@ const Spotlight = () => {
               <img src="/spotlight/spotlight-15.jpg" alt="" />
             </div>
             <div className="marquee-img-item marquee-text-item">
-                <h1>Brisola</h1>
+                <h1>Resultado</h1>
             </div>
             <div className="marquee-img-item">
               <img src="/spotlight/spotlight-16.jpg" alt="" />

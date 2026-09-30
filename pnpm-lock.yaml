@@ -38,6 +38,9 @@ importers:
       split-type:
         specifier: ^0.3.4
         version: 0.3.4
+      swiper:
+        specifier: ^14.3.0
+        version: 14.3.0
 
 packages:
 
@@ -374,6 +377,10 @@ packages:
       babel-plugin-macros:
         optional: true
 
+  swiper@14.3.0:
+    resolution: {integrity: sha512-qw0Xv1+sylM8KCQxWxV2iYAK2G6XjFGPZ/8F1baEsY8DK4A3sTnLx6jUJ0G71rDbVQ05JHMWkcWmJ5NvlxZO0w==}
+    engines: {node: '>= 4.7.0'}
+
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
@@ -626,5 +633,7 @@ snapshots:
     dependencies:
       client-only: 0.0.1
       react: 19.1.0
+
+  swiper@14.3.0: {}
 
   tslib@2.8.1: {}

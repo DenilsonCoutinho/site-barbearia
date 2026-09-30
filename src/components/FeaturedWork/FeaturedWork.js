@@ -1,89 +1,117 @@
 "use client";
+
 import "./FeaturedWork.css";
-import { useRef } from "react";
-import { projects } from "./project.js";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import { projects, reverseProjects } from "./project.js";
+import { useEffect, useRef, useState } from "react";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
-
-export default function FeaturedWork() {
-  const featuredWorkContainerRef = useRef(null);
-
-  useGSAP(
-    () => {
-      const createFeaturedWorkItem = (project) => {
-        const featuredWorkItem = document.createElement("div");
-        featuredWorkItem.className = "featured-work-item";
-        featuredWorkItem.innerHTML = `
-        <div class="featured-work-frame">
-          <div class="featured-work-item-img">
-            <img src="${project.img}" alt="${project.name}" />
+function WorkSet({ items, hidden = false, setRef }) {
+  return (
+    <div className="featured-work-set" aria-hidden={hidden || undefined} ref={setRef}>
+      {items.map((project) => (
+        <article className="featured-work-item" key={project.name}>
+          <div className="featured-work-frame">
+            <div className="featured-work-item-img">
+              <img src={project.img} alt={hidden ? "" : project.name} draggable="false" />
+            </div>
           </div>
-        </div>
-        <div class="featured-work-item-copy">
-          <h3>${project.name}</h3>
-          ${project.tag ? `<p class="sm">${project.tag}</p>` : ""}
-        </div>
-      `;
-        return featuredWorkItem;
-      };
+        </article>
+      ))}
+    </div>
+  );
+}
 
-      const workContainer = featuredWorkContainerRef.current;
+function ContinuousCarousel({ items, direction = "left", label }) {
+  const trackRef = useRef(null);
+  const firstSetRef = useRef(null);
+  const positionRef = useRef(0);
+  const pointerRef = useRef(null);
+  const lastFrameRef = useRef(null);
+  const defaultSpeed = direction === "right" ? 28 : -28;
+  const speedRef = useRef(defaultSpeed);
+  const [isDragging, setIsDragging] = useState(false);
 
-      workContainer.innerHTML = "";
+  const wrapPosition = () => {
+    const setWidth = firstSetRef.current?.offsetWidth;
+    if (!setWidth) return;
 
-      for (let i = 0; i < projects.length; i += 2) {
-        const row = document.createElement("div");
-        row.className = "row";
+    while (positionRef.current <= -setWidth) positionRef.current += setWidth;
+    while (positionRef.current > 0) positionRef.current -= setWidth;
+  };
 
-        row.appendChild(createFeaturedWorkItem(projects[i]));
+  const paintTrack = () => {
+    wrapPosition();
+    if (trackRef.current) trackRef.current.style.transform = `translate3d(${positionRef.current}px, 0, 0)`;
+  };
 
-        if (i + 1 < projects.length) {
-          row.appendChild(createFeaturedWorkItem(projects[i + 1]));
-        }
+  useEffect(() => {
+    let animationFrame;
 
-        workContainer.appendChild(row);
+    const animate = (time) => {
+      const previous = lastFrameRef.current ?? time;
+      lastFrameRef.current = time;
+
+      if (!pointerRef.current) {
+        const elapsed = time - previous;
+        const returnStrength = Math.min(1, elapsed / 750);
+        speedRef.current += (defaultSpeed - speedRef.current) * returnStrength;
+        positionRef.current += (speedRef.current * elapsed) / 1000;
+        paintTrack();
       }
 
-      gsap.set(".featured-work-item", {
-        y: 1000,
-      });
+      animationFrame = requestAnimationFrame(animate);
+    };
 
-      document.querySelectorAll(".row").forEach((row) => {
-        const featuredWorkItems = row.querySelectorAll(".featured-work-item");
+    animationFrame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrame);
+  }, [defaultSpeed]);
 
-        featuredWorkItems.forEach((item, itemIndex) => {
-          const isLeftProjectItem = itemIndex === 0;
-          gsap.set(item, {
-            rotation: isLeftProjectItem ? -60 : 60,
-            transformOrigin: "center center",
-          });
-        });
+  const handlePointerDown = (event) => {
+    pointerRef.current = { id: event.pointerId, x: event.clientX, time: event.timeStamp };
+    speedRef.current = 0;
+    event.currentTarget.setPointerCapture(event.pointerId);
+    setIsDragging(true);
+  };
 
-        ScrollTrigger.create({
-          trigger: row,
-          start: "top 70%",
-          onEnter: () => {
-            gsap.to(featuredWorkItems, {
-              y: 0,
-              rotation: 0,
-              duration: 1,
-              ease: "power4.out",
-              stagger: 0.25,
-            });
-          },
-        });
-      });
+  const handlePointerMove = (event) => {
+    if (!pointerRef.current || pointerRef.current.id !== event.pointerId) return;
+    const distance = event.clientX - pointerRef.current.x;
+    const elapsed = Math.max(event.timeStamp - pointerRef.current.time, 16);
 
-    },
-    { scope: featuredWorkContainerRef }
-  );
+    positionRef.current += distance;
+    speedRef.current = Math.max(-560, Math.min(560, (distance / elapsed) * 1000));
+    pointerRef.current.x = event.clientX;
+    pointerRef.current.time = event.timeStamp;
+    paintTrack();
+  };
+
+  const handlePointerEnd = (event) => {
+    if (!pointerRef.current || pointerRef.current.id !== event.pointerId) return;
+    pointerRef.current = null;
+    setIsDragging(false);
+  };
 
   return (
+    <div className={`featured-work-carousel featured-work-carousel--${direction}`} aria-label={label}>
+      <div
+        className={`featured-work-track${isDragging ? " is-dragging" : ""}`}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerEnd}
+        onPointerCancel={handlePointerEnd}
+        ref={trackRef}
+      >
+        <WorkSet items={items} setRef={firstSetRef} />
+        <WorkSet items={items} hidden />
+      </div>
+    </div>
+  );
+}
+
+export default function FeaturedWork() {
+  return (
     <>
-      <div className="featured-work-list" ref={featuredWorkContainerRef}></div>
+      <ContinuousCarousel items={projects} label="Cortes que você vai dominar" />
+      <ContinuousCarousel items={reverseProjects} direction="right" label="Mais cortes que você vai dominar" />
     </>
   );
 }

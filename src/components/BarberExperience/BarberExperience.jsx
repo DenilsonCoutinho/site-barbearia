@@ -11,28 +11,29 @@ const BarberExperience = () => {
         aria-hidden="true"
       />
       <div className="barber-experience-copy">
-        <Copy animateOnScroll={true}>
-          <p className="sm">Como eu ensino</p>
-        </Copy>
         <Copy animateOnScroll={true} delay={0.1}>
-          <h2>Domine a arte da tesoura sem enrolação.</h2>
+          <h2>
+            Mais domínio. <span>Mais confiança.</span>
+          </h2>
         </Copy>
         <Copy animateOnScroll={true} delay={0.2}>
           <p className="barber-experience-text">
-            Entregue um corte perfeito, personalizado de acordo com cada
-            formato de crânio. O método é direto e prático, sem divisões
-            desnecessárias. Trazendo mais confiança e fidelização para cada
-            cliente.
+            Você não precisa da melhor ferramenta do mundo. Precisa de técnica
+            aplicada na prática: leitura, precisão e domínio para entregar um
+            corte personalizado em cada formato de cabeça.
           </p>
         </Copy>
       </div>
 
       <div className="barber-experience-collage" aria-label="Fotos da Barbearia Brisola">
+        <img
+          className="barber-experience-mark"
+          src="/logo-dominio-tesoura.png"
+          alt=""
+          aria-hidden="true"
+        />
         <div className="barber-experience-frame barber-experience-frame-top">
-          <img src="/brisola/aula-turma.webp" alt="Erick Brisola conduzindo a aula com a turma acompanhando" />
-        </div>
-        <div className="barber-experience-frame barber-experience-frame-bottom">
-          <img src="/brisola/conexao.webp" alt="Alunos da Brisola durante a aula" />
+          <img src="/brisola/aula-tesoura.webp" alt="Erick Brisola demonstrando corte na tesoura" />
         </div>
         <div className="barber-experience-accent" aria-hidden="true" />
       </div>

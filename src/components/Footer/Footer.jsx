@@ -25,7 +25,7 @@ const Footer = () => {
   };
 
   const imageParticleCount = 10;
-  const imagePaths = Array.from({ length: imageParticleCount }, () => "/logo-brisola.png");
+  const imagePaths = Array.from({ length: imageParticleCount }, () => "/logo-dominio-tesoura.png");
 
   useEffect(() => {
     const updateLocalTime = () => {
@@ -199,8 +199,11 @@ const Footer = () => {
         <div className="footer-header-content">
           <div className="footer-header">
             <Copy animateOnScroll={true} delay={0.2}>
-            <h1>Domine a técnica. Eleve sua barbearia.</h1>
+            <h1>Domine a técnica. Obtenha resultados.</h1>
             </Copy>
+            <p className="footer-subtitle">
+              Para que a tesoura não seja mais um inimigo, mas uma ferramenta para fidelizar clientes e aumentar seu faturamento.
+            </p>
           </div>
           <div className="footer-link">
             <Button

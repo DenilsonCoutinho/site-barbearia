@@ -45,7 +45,21 @@ footer .footer-header-content {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 2rem;
+  gap: 1.25rem;
+}
+
+footer .footer-header h1 {
+  max-width: 17ch;
+  margin: 0 auto;
+  font-size: clamp(3.25rem, 5vw, 4.75rem);
+}
+
+footer .footer-subtitle {
+  max-width: 42rem;
+  margin: 0;
+  color: var(--base-200);
+  font-size: 1.1rem;
+  line-height: 1.35;
 }
 
 footer .footer-byline {
@@ -96,6 +110,12 @@ footer .footer-byline p {
   footer .footer-header-content {
     width: 100%;
     padding: 1.25rem;
+  }
+
+  footer .footer-subtitle {
+    max-width: 28rem;
+    margin-top: 0;
+    font-size: 1rem;
   }
 
   footer .footer-copyright {

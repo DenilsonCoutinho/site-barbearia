@@ -7,61 +7,42 @@ const CTACard = () => {
   return (
     <section className="cta" id="inscricao">
       <div className="container">
-        <div className="cta-copy">
-          <div className="cta-col">
-            <Copy animateOnScroll={true}>
-              <p className="sm">Domínio dos Cortes na Tesoura</p>
-            </Copy>
-          </div>
-
-          <div className="cta-col">
-            <Copy animateOnScroll={true}>
-              <p className="lg">
-                Cinco cortes na tesoura, técnica direta e aplicação real para a
-                rotina da sua barbearia.
-              </p>
-            </Copy>
-
-            <Button
-              animateOnScroll={true}
-              delay={0.25}
-              variant="dark"
-              href="#inscricao"
-            >
-              Quero me profissionalizar
-            </Button>
-          </div>
-        </div>
-
         <div className="cta-card">
           <div className="cta-card-copy">
-            <div className="cta-card-col">
+            <div className="cta-card-col cta-card-intro">
               <Copy animateOnScroll={true}>
-                <h3>Entre para a aula</h3>
+                <p className="sm">Oferta</p>
+                <h3>Domine a tesoura. Eleve o nível dos seus cortes.</h3>
               </Copy>
             </div>
 
-            <div className="cta-card-col">
-              <Copy animateOnScroll={true}>
-                <p>
-                  Em 5 horas, eu vou conduzir você por divisões, angulações,
-                  textura, projeção, camadas e conexões — tudo no ritmo de quem
-                  vive a rotina da barbearia.
-                </p>
-
-                <p>
-                  Certificado incluso. Sem enrolação e sem exigir ferramentas
-                  caras: apenas técnica, prática e precisão.
-                </p>
-              </Copy>
-
+            <div className="cta-card-col cta-card-offer">
               <div className="price-box">
-                <span className="price-label">Investimento</span>
-                <strong>R$ 127,00</strong>
-                <span className="price-note">Acesso ao curso + certificado</span>
-                <Button animateOnScroll={true} delay={0.25} variant="light" href="#inscricao">
-                  Quero garantir minha vaga
+                <div className="price-box-header">
+                  <span className="price-label">Condição especial</span>
+                    <span className="price-access">Oferta limitada</span>
+                </div>
+                  <span className="price-old">De <s>R$ 219,90</s></span>
+                  <span className="price-now">Por apenas</span>
+                  <div className="price-value">
+                    <span>R$</span>
+                    <strong>127</strong>
+                    <sup>,90</sup>
+                  </div>
+                  <span className="price-note">Ou 10x de R$ 12,79</span>
+                  <span className="price-dogao">Menos que um dogão por mês.</span>
+                  <p className="cta-receives">Você recebe:</p>
+                  <ul className="cta-benefits">
+                    <li>Curso completo</li>
+                    <li>5 horas de conteúdo</li>
+                    <li>Acesso online imediato</li>
+                    <li>Bônus: e-book “5 Dicas para Lotar sua Agenda”</li>
+                    <li>Certificado de conclusão</li>
+                  </ul>
+                <Button animateOnScroll={true} delay={0.25} variant="dark" href="#inscricao">
+                  Quero dominar a tesoura
                 </Button>
+                <span className="price-reassurance">Compra segura · acesso liberado na hora</span>
               </div>
             </div>
           </div>

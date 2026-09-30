@@ -1,6 +1,6 @@
 .site-nav {
   position: fixed;
-  inset: 0 0 auto;
+  inset: 2.6rem 0 auto;
   z-index: 10001;
   display: flex;
   justify-content: space-between;
@@ -9,7 +9,7 @@
   pointer-events: none;
 }
 .nav-logo, .nav-toggle { pointer-events: auto; }
-.nav-logo { display: block; width: 5.5rem; }
+.nav-logo { display: block; width: 4.75rem; }
 .nav-logo img { display: block; width: 100%; height: auto; }
 .nav-toggle {
   border: 0; border-radius: .75rem; padding: .9rem 1.25rem;
@@ -34,8 +34,8 @@
 .menu-links a:hover, .menu-social a:hover { color: var(--base-200); }
 .menu-social a { color: var(--base-100); text-decoration: none; transition: color .2s ease; }
 @media (max-width: 1000px) {
-  .site-nav { padding: 1rem 1.25rem; }
-  .nav-logo { width: 4.5rem; }
+  .site-nav { inset: 2.25rem 0 auto; padding: 1rem 1.25rem; }
+  .nav-logo { width: 4rem; }
   .menu-overlay { padding: 6rem 1.25rem 2rem; }
   .menu-panel { grid-template-columns: 1fr; gap: 2rem; }
   .menu-links a { font-size: clamp(2.8rem, 13vw, 5rem); }

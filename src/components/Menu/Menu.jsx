@@ -53,7 +53,7 @@ const Menu = () => {
     <>
       <nav className="site-nav">
         <a className="nav-logo" href="#inicio" onClick={(e) => { e.preventDefault(); goTo("#inicio"); }}>
-          <img src="/logo-brisola.png" alt="Logo da Barbearia Brisola" />
+          <img src="/logo-dominio-tesoura.png" alt="Logo Domínio dos Cortes na Tesoura" />
         </a>
         <button className="nav-toggle" type="button" onClick={toggle} aria-expanded={open}>
           {open ? "Fechar" : "Menu"}
