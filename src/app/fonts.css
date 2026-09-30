@@ -116,4 +116,5 @@
   font-family: "Big Shoulders Display";
   src: url("/fonts/big-shoulders-display/BigShouldersDisplay.ttf")
     format("woff2-variations");
+  font-display: swap;
 }

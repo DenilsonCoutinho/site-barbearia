@@ -37,6 +37,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/brisola-hero-bg.webp"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="font"
+          href="/fonts/big-shoulders-display/BigShouldersDisplay.ttf"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <ViewTransitions>
           <ClientLayout>{children}</ClientLayout>
