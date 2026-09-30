@@ -3,6 +3,7 @@
 import "./FeaturedWork.css";
 import { projects, reverseProjects } from "./project.js";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 function WorkSet({ items, hidden = false, setRef }) {
   return (
@@ -11,7 +12,16 @@ function WorkSet({ items, hidden = false, setRef }) {
         <article className="featured-work-item" key={project.name}>
           <div className="featured-work-frame">
             <div className="featured-work-item-img">
-              <img src={project.img} alt={hidden ? "" : project.name} draggable="false" />
+              <Image
+                src={project.img}
+                alt={hidden ? "" : project.name}
+                width={1202}
+                height={1551}
+                sizes="(max-width: 1000px) 64vw, 25vw"
+                quality={90}
+                loading="lazy"
+                draggable="false"
+              />
             </div>
           </div>
         </article>

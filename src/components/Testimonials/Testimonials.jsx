@@ -59,7 +59,7 @@ const Testimonials = () => {
               <article className="testimonial-card" key={`${testimonial.name}-${index}`}>
                 {testimonial.image ? (
                   <div className="testimonial-card-image">
-                    <img src={testimonial.image} alt={testimonial.name} />
+                    <img src={testimonial.image} alt={testimonial.name} loading="lazy" decoding="async" />
                   </div>
                 ) : (
                   <div className="testimonial-card-image testimonial-card-placeholder" aria-hidden="true" />

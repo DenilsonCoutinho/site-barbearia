@@ -9,6 +9,8 @@ const BarberExperience = () => {
         src="/ornaments/experience-divider.png"
         alt=""
         aria-hidden="true"
+        loading="lazy"
+        decoding="async"
       />
       <div className="barber-experience-copy">
         <Copy animateOnScroll={true} delay={0.1}>
@@ -31,9 +33,11 @@ const BarberExperience = () => {
           src="/logo-dominio-tesoura.png"
           alt=""
           aria-hidden="true"
+          loading="lazy"
+          decoding="async"
         />
         <div className="barber-experience-frame barber-experience-frame-top">
-          <img src="/brisola/aula-tesoura.webp" alt="Erick Brisola demonstrando corte na tesoura" />
+          <img src="/brisola/aula-tesoura.webp" alt="Erick Brisola demonstrando corte na tesoura" loading="lazy" decoding="async" />
         </div>
         <div className="barber-experience-accent" aria-hidden="true" />
       </div>
@@ -42,6 +46,8 @@ const BarberExperience = () => {
         src="/ornaments/experience-divider.png"
         alt=""
         aria-hidden="true"
+        loading="lazy"
+        decoding="async"
       />
     </section>
   );

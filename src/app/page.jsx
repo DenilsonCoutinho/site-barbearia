@@ -105,6 +105,8 @@ const Page = () => {
               <img
                 src="/brisola/erick-authority.jpeg"
                 alt="Erick Brisola, professor do curso Domínio dos Cortes na Tesoura"
+                loading="lazy"
+                decoding="async"
               />
               <span className="sales-problem-authority-signature">
                 <span>Erick Brisola</span>
@@ -298,6 +300,8 @@ const Page = () => {
                 <img
                   src="/brisola/erick-portrait.jpeg"
                   alt="Erick Brisola, professor do curso Domínio dos Cortes na Tesoura"
+                  loading="lazy"
+                  decoding="async"
                 />
               </figure>
             </div>
@@ -307,6 +311,8 @@ const Page = () => {
                 src="/logo-dominio-tesoura.png"
                 alt=""
                 aria-hidden="true"
+                loading="lazy"
+                decoding="async"
               />
               <p>
                 Erick Brisola é barbeiro, professor, consultor e proprietário
