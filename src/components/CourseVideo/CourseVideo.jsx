@@ -1,4 +1,5 @@
 import "./CourseVideo.css";
+import Button from "@/components/Button/Button";
 
 const CourseVideo = () => {
   return (
@@ -13,6 +14,11 @@ const CourseVideo = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         />
+      </div>
+      <div className="course-video-cta">
+        <Button href="#inscricao" animateOnScroll={true}>
+          Quero dominar a tesoura
+        </Button>
       </div>
     </section>
   );

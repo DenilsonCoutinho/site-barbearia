@@ -85,6 +85,16 @@
   pointer-events: none;
 }
 
+.course-video-cta {
+  width: min(100%, 52rem);
+  margin-top: 0.5rem;
+}
+
+.course-video-cta .button {
+  min-width: 0;
+  padding-right: 1.2rem;
+}
+
 @media (max-width: 700px) {
   .course-video {
     gap: 1.5rem;
@@ -116,5 +126,9 @@
 
   .course-video-player::after {
     top: 0.96rem;
+  }
+
+  .course-video-cta {
+    width: min(100%, 22rem);
   }
 }
