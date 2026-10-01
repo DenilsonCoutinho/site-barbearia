@@ -265,6 +265,7 @@ const Page = () => {
             <span>Acesso imediato</span>
             <LuScissors className="instructor-marquee-icon" aria-hidden="true" />
             <span>Conteúdo objetivo</span>
+            <LuScissors className="instructor-marquee-icon" aria-hidden="true" />
           </div>
           <div className="instructor-marquee-group" aria-hidden="true">
             <span>Inscrições abertas</span>
@@ -272,6 +273,7 @@ const Page = () => {
             <span>Acesso imediato</span>
             <LuScissors className="instructor-marquee-icon" aria-hidden="true" />
             <span>Conteúdo objetivo</span>
+            <LuScissors className="instructor-marquee-icon" aria-hidden="true" />
           </div>
           <div className="instructor-marquee-group" aria-hidden="true">
             <span>Inscrições abertas</span>
@@ -279,6 +281,7 @@ const Page = () => {
             <span>Acesso imediato</span>
             <LuScissors className="instructor-marquee-icon" aria-hidden="true" />
             <span>Conteúdo objetivo</span>
+            <LuScissors className="instructor-marquee-icon" aria-hidden="true" />
           </div>
           <div className="instructor-marquee-group" aria-hidden="true">
             <span>Inscrições abertas</span>
@@ -286,6 +289,7 @@ const Page = () => {
             <span>Acesso imediato</span>
             <LuScissors className="instructor-marquee-icon" aria-hidden="true" />
             <span>Conteúdo objetivo</span>
+            <LuScissors className="instructor-marquee-icon" aria-hidden="true" />
           </div>
         </div>
       </div>

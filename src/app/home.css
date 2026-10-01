@@ -371,7 +371,7 @@
 .sales-problem-authority-signature {
   position: absolute;
   z-index: 2;
-  left: 1.35rem;
+  left: 50%;
   bottom: 6.25rem;
   display: inline-block;
   color: rgba(246, 239, 226, 0.7);
@@ -383,6 +383,7 @@
   line-height: 1;
   text-shadow: 0 0.15rem 0.7rem rgba(0, 0, 0, 0.75);
   white-space: nowrap;
+  transform: translateX(-50%);
 }
 
 .sales-problem-authority-signature > span {
@@ -798,6 +799,26 @@
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
     align-items: center;
     gap: 1.25rem;
+  }
+
+  .sales-problem-intro {
+    display: contents;
+  }
+
+  .sales-problem-heading {
+    order: 1;
+  }
+
+  .sales-problem-list {
+    order: 2;
+  }
+
+  .sales-problem-authority {
+    order: 3;
+  }
+
+  .sales-problem-conclusion {
+    order: 4;
   }
 
   .sales-problem-heading {

@@ -25,13 +25,13 @@ export const clientReviewsData = [
   },
   {
     review:
-      "Você não precisa da melhor ferramenta do mundo. Precisa de técnica, leitura e prática.",
+      "Você não precisa da melhor ferramenta do mundo. Precisa da melhor técnica, aplicada na prática. Mais domínio. Mais confiança.",
     clientName: "A realidade",
     clientCompany: "Barbearia brasileira",
   },
   {
     review:
-      "Eu trago 10 anos de experiência na barbearia, formação com profissionais reconhecidos do Brasil e aprendizados vividos com a Schorem.",
+      "São 10 anos de experiência na barbearia, formação com profissionais de referência no Brasil e no mundo e muita prática acumulada na cadeira. Experiência que virou método.",
     clientName: "Minha experiência",
     clientCompany: "Acompanhamento direto",
   },

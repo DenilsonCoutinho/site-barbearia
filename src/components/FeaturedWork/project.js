@@ -15,6 +15,10 @@ export const projects = [
     name: "Corte Longo",
     img: "/brisola-post/corte-longo.png",
   },
+  {
+    name: "Mullet",
+    img: "/brisola-post/mullet.png",
+  },
 ];
 
 export const reverseProjects = [
@@ -33,5 +37,9 @@ export const reverseProjects = [
   {
     name: "Long Trim com Projeção - Old Money",
     img: "/brisola-post/group-12.png",
+  },
+  {
+    name: "Mullet",
+    img: "/brisola-post/group-16.png",
   },
 ];

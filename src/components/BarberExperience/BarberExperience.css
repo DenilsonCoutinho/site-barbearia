@@ -45,6 +45,7 @@
 }
 
 .barber-experience-text {
+  display: none;
   max-width: 27rem;
   margin-top: 2rem;
   font-size: 1.2rem;
