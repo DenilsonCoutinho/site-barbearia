@@ -16,7 +16,7 @@ const CourseVideo = () => {
         />
       </div>
       <div className="course-video-cta">
-        <Button href="#inscricao" animateOnScroll={true}>
+        <Button href="https://pay.kiwify.com.br/yLo4A52" animateOnScroll={true}>
           Quero dominar a tesoura
         </Button>
       </div>

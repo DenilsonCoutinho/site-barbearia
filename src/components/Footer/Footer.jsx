@@ -211,7 +211,7 @@ const Footer = () => {
               delay={0.5}
               variant="light"
               icon={IoMail}
-              href="#inscricao"
+              href="mailto:Brisolabarbeariaclassica@gmail.com"
             >
               Alguma dúvida? Fale comigo!
             </Button>

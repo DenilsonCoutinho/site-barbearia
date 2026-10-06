@@ -39,7 +39,7 @@ const CTACard = () => {
                     <li>Bônus: e-book “5 Dicas para Lotar sua Agenda”</li>
                     <li>Certificado de conclusão</li>
                   </ul>
-                <Button animateOnScroll={true} delay={0.25} variant="dark" href="#inscricao">
+                <Button animateOnScroll={true} delay={0.25} variant="dark" href="https://pay.kiwify.com.br/yLo4A52">
                   Quero dominar a tesoura
                 </Button>
                 <span className="price-reassurance">Compra segura · acesso liberado na hora</span>

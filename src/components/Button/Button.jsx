@@ -138,7 +138,7 @@ export default function Button({
       href={href}
       className={`button button--${variant}`}
       onClick={(e) => {
-        if (!href) return;
+        if (!href || href.startsWith("mailto:") || href.startsWith("http")) return;
         e.preventDefault();
         navigateWithTransition(href);
       }}

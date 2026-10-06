@@ -83,7 +83,7 @@ const Page = () => {
                 ferramenta de resultado.
               </p>
 
-              <Button delay={0.55} href="#inscricao">
+              <Button delay={0.55} href="https://pay.kiwify.com.br/yLo4A52">
                 Quero dominar a tesoura
               </Button>
             </div>
@@ -139,7 +139,7 @@ const Page = () => {
               É exatamente isso que você vai desenvolver no Domínio dos Cortes
               na Tesoura.
             </p>
-            <Button animateOnScroll={true} href="#inscricao">
+            <Button animateOnScroll={true} href="https://pay.kiwify.com.br/yLo4A52">
               Garantir minha vaga
             </Button>
           </div>
